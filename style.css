@@ -1,0 +1,74 @@
+/* Custom CSS for animations and specific styles */
+
+/* Sets smooth scrolling behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Defines the keyframe animation for the hero section text */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applies the fadeInUp animation to the hero text container */
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+body {
+    background-color: #2D65A8; /* Medium blue */
+    color: #FFFFFF;           /* White text for contrast */
+}
+.your-image-class {
+  filter: brightness(150%);
+}
+.your-image-class {
+  filter: brightness(1.5) contrast(1.2);
+}
+
+/* Styles the active navigation link with the gold accent color */
+nav ul li a.active {
+    color: #FFD700; /* Gold from the sunset gradient */
+    font-weight: 700;
+}
+
+/* Styles for a call-to-action (CTA) button */
+.cta-button {
+    background-color: #FFD700;  /* Gold accent for a prominent button */
+    color: #0A1F44;            /* Dark navy text for readability */
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FF8C00; /* Deep orange accent on hover */
+}
+
+/*
+  Initial state for elements that will reveal on scroll.
+  The 'reveal' class is added by script.js to target elements.
+*/
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/*
+  Final state for revealed elements.
+  The 'visible' class is added by script.js when the element enters the viewport.
+*/
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
